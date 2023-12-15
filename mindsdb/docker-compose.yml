@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  mindsdb:
+    image: mindsdb/mindsdb:23.5.4.1
+    command: bash -c "python3 -m mindsdb --api=http,mysql"
+    volumes:
+      - /volumes:/root
+    ports:
+      - 47334:47334
+      - 47335:47335
+      - 47336:47336
